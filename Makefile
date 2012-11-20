@@ -10,3 +10,4 @@ $(PROG): $(OBJECTS)
 
 clean:
 	rm -f *.o $(P)
+	rm -rf $(P).dSYM
