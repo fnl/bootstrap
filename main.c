@@ -2,7 +2,8 @@
 
 /** Print help and exit. */
 static void help(char *name) {
-  fprintf(stderr, "usage: %s [-hqv] [files]\n\n", basename(name));
+  fprintf(stderr, "usage: %s [-dhqv] [files]\n\n", basename(name));
+  fputs("-d      show debug logging messages\n", stderr);
   fputs("-h      print this help and exit\n", stderr);
   fputs("-q      quiet logging (errors only)\n", stderr);
   fputs("-v      verbose logging (default: warnings)\n", stderr);
@@ -56,10 +57,11 @@ int main(int argc, char **argv) {
   g_log_set_default_handler(silent_handler, NULL);
 
   /* option parsing */
-  while ((c = getopt(argc, argv, "hqv")) != -1)
+  while ((c = getopt(argc, argv, "hqvd")) != -1)
     switch (c)
     {
       case 'h': show_help = 1; break;
+      case 'd': if (verbosity == 1) verbosity = 3; break;
       case 'v': if (verbosity == 1) verbosity = 2; break;
       case 'q': if (verbosity == 1) verbosity = 0; break;
       case '?': break; // getopt prints an error message
@@ -68,21 +70,15 @@ int main(int argc, char **argv) {
 
   /* logging setup */
   GLogLevelFlags log_level = G_LOG_LEVEL_CRITICAL | G_LOG_LEVEL_ERROR;
-  
   if (verbosity > 0) log_level |= G_LOG_LEVEL_WARNING;
-  if (verbosity > 1) log_level |= G_LOG_LEVEL_MESSAGE | G_LOG_LEVEL_INFO;
-  if (verbosity > 2) log_level |= G_LOG_LEVEL_DEBUG;
-
-  g_log_set_handler(
-      G_LOG_DOMAIN, 
-      log_level | G_LOG_FLAG_FATAL | G_LOG_FLAG_RECURSION,
-      stderr_handler,
-      NULL);
+  if (verbosity > 1) log_level |= G_LOG_LEVEL_MESSAGE;
+  if (verbosity > 2) log_level |= G_LOG_LEVEL_INFO | G_LOG_LEVEL_DEBUG;
+  g_log_set_handler(G_LOG_DOMAIN, log_level, stderr_handler, NULL);
 
   /* print help and exit if requested */
   if (show_help) help (argv[0]);
 
-  g_message("%i arguments", argc - optind); // verbose logging example
+  g_debug("%i arguments", argc - optind); // verbose logging example
 
   /* RUN PROGRAM */
 
