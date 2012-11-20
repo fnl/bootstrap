@@ -62,7 +62,7 @@ Important "standard" libraries (install them with Homebrew_ on Mac OSX):
 * Libxml2_ the GNOME XML parser toolkit to work with markup documents\*\*
 * SQLite_ a self-contained SQL database engine\*\*\*
 
---
+| --
 | \* n/a from Homebrew_ (OSX), but libraries are only needed for developing parsers
 | \*\* Homebrew_ does not correctly install Libxml2 with Python support (see `issue <https://github.com/mxcl/homebrew/pull/13511>`_)
 | \*\*\* for Homebrew_, check out the installation options using ``brew info sqlite``
