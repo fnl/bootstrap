@@ -4,7 +4,7 @@ bootstrap
 Synopsis
 --------
 
-Quick-start a **GNU C project** setup by copying these contents::
+Quick-start a **GNU C project** setup with the GLib_::
 
   cp /path/to/bootstrap/* .
   export P=program
@@ -13,6 +13,8 @@ Quick-start a **GNU C project** setup by copying these contents::
   # code the program...
   make
   make clean
+  # measure coverage:
+  ./gcov.sh program-args
 
 The idea for this bootstrap setup is based on the excellent book `21st Century C`_ by Ben Klemens.
 
@@ -54,16 +56,16 @@ Important "standard" libraries (install them with Homebrew_ on Mac OSX):
 * Check_ an alternate unit test library to the GLib
 * cURL_ library to connect and communicate with servers
 * Flex_ a fast lexical scanner/tokenizer generator\*
-* Glib_ the GNOME standard library for unit testin\g, data structures, and threading 
+* GLib_ the GNOME standard library for unit testin\g, data structures, and threading 
 * glibc_ the GNU C Library for systems with a Linux kernel (should already be installed by default)
 * GSL_ the GNU Scientific Library for numerical computing
 * Libxml2_ the GNOME XML parser toolkit to work with markup documents\*\*
 * SQLite_ a self-contained SQL database engine\*\*\*
 
-|--
-|\* n/a from Homebrew_ (OSX), but libraries are only needed for developing parsers
-|\*\* Homebrew_ does not correctly install Libxml2 with Python support (see `issue <https://github.com/mxcl/homebrew/pull/13511>`_)
-|\*\*\* for Homebrew_, check out the installation options using ``brew info sqlite``
+--
+| \* n/a from Homebrew_ (OSX), but libraries are only needed for developing parsers
+| \*\* Homebrew_ does not correctly install Libxml2 with Python support (see `issue <https://github.com/mxcl/homebrew/pull/13511>`_)
+| \*\*\* for Homebrew_, check out the installation options using ``brew info sqlite``
 
 .. _21st Century C: http://shop.oreilly.com/product/0636920025108.do
 .. _Homebrew: http://mxcl.github.com/homebrew/
@@ -79,7 +81,7 @@ Important "standard" libraries (install them with Homebrew_ on Mac OSX):
 .. _Check: http://check.sourceforge.net/
 .. _cURL: http://curl.haxx.se/
 .. _Flex: http://flex.sourceforge.net/
-.. _Glib: http://library.gnome.org/
+.. _GLib: http://library.gnome.org/
 .. _glibc: http://www.gnu.org/software/libc/
 .. _GSL: http://www.gnu.org/software/gsl/
 .. _Libxml2: http://xmlsoft.org/
