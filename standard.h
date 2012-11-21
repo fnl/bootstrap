@@ -1,5 +1,6 @@
+#include <ctype.h>
 #include <glib.h>
-#include <math.h>
+#include <locale.h>
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
