@@ -69,7 +69,7 @@ int main(int argc, char **argv) {
     }
 
   /* logging setup */
-  GLogLevelFlags log_level = G_LOG_LEVEL_CRITICAL | G_LOG_LEVEL_ERROR;
+  GLogLevelFlags log_level = G_LOG_LEVEL_CRITICAL | G_LOG_LEVEL_ERROR | G_LOG_FLAG_FATAL;
   if (verbosity > 0) log_level |= G_LOG_LEVEL_WARNING;
   if (verbosity > 1) log_level |= G_LOG_LEVEL_MESSAGE;
   if (verbosity > 2) log_level |= G_LOG_LEVEL_INFO | G_LOG_LEVEL_DEBUG;
