@@ -4,7 +4,7 @@ bootstrap
 Synopsis
 --------
 
-Quick-start a **GNU C project** setup with the GLib_::
+Quick-start a (mostly GNU) **C project** setup::
 
   cp /path/to/bootstrap/* .
   export P=program
@@ -54,7 +54,7 @@ Important "standard" libraries (install some of them with Homebrew_ on Mac OSX, 
 
 * APR_ the Apache Portable Runtime library\* (Apache 2)
 * Bison_ the GNU LARL(1) parser generator\* (GPL 3)
-* CII_ a collection of data structures, threading, and memory management code from "C Interfaces and Implementations" by D. R. Hanson\* (MIT L)
+* CII_ data structure, threading, and memory management code from "C Interfaces and Implementations"\* (MIT L)
 * Check_ an alternate unit test library to the GLib (LGPL 2)
 * cURL_ library to connect and communicate with servers (MIT L)
 * Flex_ a fast lexical scanner/tokenizer generator\* (BSD L)
