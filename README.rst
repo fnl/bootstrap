@@ -50,20 +50,23 @@ Recommendet development environment tools (install them Homebrew_ on OSX):
 Libraries
 ---------
 
-Important "standard" libraries (install them with Homebrew_ on Mac OSX):
+Important "standard" libraries (install some of them with Homebrew_ on Mac OSX, on Ubuntu/Debian, all but CII_ and MemSL2_ should be available):
 
-* Bison_ the GNU LARL(1) parser generator*
-* Check_ an alternate unit test library to the GLib
-* cURL_ library to connect and communicate with servers
-* Flex_ a fast lexical scanner/tokenizer generator\*
-* GLib_ the GNOME standard library for unit testin\g, data structures, and threading 
-* glibc_ the GNU C Library for systems with a Linux kernel (should already be installed by default)
-* GSL_ the GNU Scientific Library for numerical computing
-* Libxml2_ the GNOME XML parser toolkit to work with markup documents\*\*
-* SQLite_ a self-contained SQL database engine\*\*\*
+* APR_ the Apache Portable Runtime library\* (Apache 2)
+* Bison_ the GNU LARL(1) parser generator\* (GPL 3)
+* CII_ a collection of data structures, threading, and memory management code from "C Interfaces and Implementations" by D. R. Hanson\* (MIT L)
+* Check_ an alternate unit test library to the GLib (LGPL 2)
+* cURL_ library to connect and communicate with servers (MIT L)
+* Flex_ a fast lexical scanner/tokenizer generator\* (BSD L)
+* GLib_ the GNOME standard library for unit testin\g, data structures, and threading (LGPL v)
+* glibc_ the GNU implementation of the C Standard Library (libc) (should already be installed by default) (LGPL V)
+* GSL_ the GNU Scientific Library for numerical computing (GPL v)
+* Libxml2_ the GNOME XML parser toolkit to work with markup documents\*\* (MIT L)
+* MemSL2_ a data structures library with memory debugging/tracing handlers\* (LGPL 3)
+* SQLite_ a self-contained SQL database engine\*\*\* (PubDom)
 
 | --
-| \* n/a from Homebrew_ (OSX), but libraries are only needed for developing parsers
+| \* n/a from Homebrew_ (OSX)
 | \*\* Homebrew_ does not correctly install Libxml2 with Python support (see `issue <https://github.com/mxcl/homebrew/pull/13511>`_)
 | \*\*\* for Homebrew_, check out the installation options using ``brew info sqlite``
 
@@ -77,12 +80,15 @@ Important "standard" libraries (install them with Homebrew_ on Mac OSX):
 .. _Valgrind: http://valgrind.org/
 .. _pkg-config: http://pkgconfig.freedesktop.org/
 
+.. _APR: http://apr.apache.org/
 .. _Bison: http://www.gnu.org/software/bison/
 .. _Check: http://check.sourceforge.net/
+.. _CII: https://sites.google.com/site/cinterfacesimplementations/
 .. _cURL: http://curl.haxx.se/
 .. _Flex: http://flex.sourceforge.net/
 .. _GLib: http://library.gnome.org/
 .. _glibc: http://www.gnu.org/software/libc/
 .. _GSL: http://www.gnu.org/software/gsl/
 .. _Libxml2: http://xmlsoft.org/
+.. _MemSL2: http://www.memorystructures.com/
 .. _SQLite: http://sqlite.org/
