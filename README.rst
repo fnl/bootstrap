@@ -61,6 +61,7 @@ Important "standard" libraries (install some of them with Homebrew_ on Mac OSX, 
 * GLib_ the GNOME standard library for unit testin\g, data structures, and threading (LGPL v)
 * glibc_ the GNU implementation of the C Standard Library (libc) (should already be installed by default) (LGPL V)
 * GSL_ the GNU Scientific Library for numerical computing (GPL v)
+* libcsv_ a ANSI C89 library to read and write column data (LGPL 3)
 * Libxml2_ the GNOME XML parser toolkit to work with markup documents\*\* (MIT L)
 * MemSL2_ a data structures library with memory debugging/tracing handlers\* (LGPL 3)
 * SQLite_ a self-contained SQL database engine\*\*\* (PubDom)
@@ -89,6 +90,7 @@ Important "standard" libraries (install some of them with Homebrew_ on Mac OSX, 
 .. _GLib: http://library.gnome.org/
 .. _glibc: http://www.gnu.org/software/libc/
 .. _GSL: http://www.gnu.org/software/gsl/
+.. _libcsv: http://sourceforge.net/projects/libcsv/?source=dlp
 .. _Libxml2: http://xmlsoft.org/
 .. _MemSL2: http://www.memorystructures.com/
 .. _SQLite: http://sqlite.org/
